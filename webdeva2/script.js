@@ -42,7 +42,29 @@ function toggleMenus(){ /open and close menu/
     menuItemsList.classList.toggle("menuShow");
 }//can optimize using toggle class with css transitions
 
+const shadow = document.querySelector('.shadow');
 
+document.addEventListener('mousemove', (e) => {
+  let x = e.clientX - (document.documentElement.clientWidth * 1.5);
+  let y = e.clientY - (document.documentElement.clientHeight * 1.5);
+  shadow.style.transform = 'translate(' + x + 'px, ' + (y + window.scrollY - 350)+ 'px)';
+  //shadow.style.transform = 'translate(' + x + 'px, ' + y+ 'px)';
+}
+)
+
+document.addEventListener("scroll", (e) => {
+	let x = e.clientX - (document.documentElement.clientWidth * 1.5);
+	let y = e.clientY - (document.documentElement.clientHeight * 1.5);
+	shadow.style.transform = 'translate(' + x + 'px, ' + (y + window.scrollY - 350)+ 'px)';
+}
+)
+
+document.addEventListener('keydown', e => {
+	if(e.code = "ArrowDown")
+	{
+		console.log(window.scrollY);
+	}
+})
 
 
 
