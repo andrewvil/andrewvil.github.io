@@ -77,6 +77,49 @@ document.addEventListener('keydown', e => {
 })
 
 
+//fullscreen toggling
+function enterFullscreen() {
+	if (document.documentElement.requestFullscreen) {
+		document.documentElement.requestFullscreen();
+	} else if (document.documentElement.mozRequestFullScreen) { // Firefox
+		document.documentElement.mozRequestFullScreen();
+	} else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+		document.documentElement.webkitRequestFullscreen();
+	} else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+		document.documentElement.msRequestFullscreen();
+	}
+}// Function to exit fullscreen mode
+function exitFullscreen() {
+	if (document.exitFullscreen) {
+		document.exitFullscreen();
+	} else if (document.mozCancelFullScreen) { // Firefox
+		document.mozCancelFullScreen();
+	} else if (document.webkitExitFullscreen) { // Chrome, Safari, and Opera
+		document.webkitExitFullscreen();
+	} else if (document.msExitFullscreen) { // IE/Edge
+		document.msExitFullscreen();
+	}
+}
+
+var bFullScreen = false;
+
+function toggleFS() {
+	if(bFullScreen)
+	{
+		exitFullscreen()
+	}
+	
+	else
+	{
+		enterFullscreen()
+	}
+	bFullScreen = !bFullScreen;
+}
+
+const buttonFS = document.querySelector("#fsb");
+
+buttonFS.addEventListener("click", toggleFS);
+
 // const leftBtn = document.querySelector("#leftBtn");
 // const rightBtn = document.querySelector("#rightBtn");
 // const upBtn = document.querySelector("#upBtn");
