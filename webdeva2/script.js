@@ -42,31 +42,39 @@ function toggleMenus(){ /open and close menu/
     menuItemsList.classList.toggle("menuShow");
 }//can optimize using toggle class with css transitions
 
+//flashlight effect
 const shadow = document.querySelector('.shadow');
-
 document.addEventListener('mousemove', (e) => {
   let x = e.clientX - (document.documentElement.clientWidth * 1.5);
   let y = e.clientY - (document.documentElement.clientHeight * 1.5);
-  shadow.style.transform = 'translate(' + x + 'px, ' + (y + window.scrollY - 350)+ 'px)';
-  //shadow.style.transform = 'translate(' + x + 'px, ' + y+ 'px)';
+  shadow.style.transform = 'translate(' + x + 'px, ' + (y + window.scrollY - 390)+ 'px)';
 }
 )
 
-document.addEventListener("scroll", (e) => {
-	let x = e.clientX - (document.documentElement.clientWidth * 1.5);
-	let y = e.clientY - (document.documentElement.clientHeight * 1.5);
-	shadow.style.transform = 'translate(' + x + 'px, ' + (y + window.scrollY - 350)+ 'px)';
+//toggle blur the omori easter egg
+var blurBool = true;
+const blurred = document.querySelector(".blur");
+blurred.addEventListener("click", toggleBlur);
+function toggleBlur() {
+	blurBool = !blurBool;
+	if(!blurBool)
+	{
+		blurred.style.filter = "none";
+	}
+	else
+	{
+		blurred.style.filter = "blur(20px)";
+	}
 }
-)
+//
 
+//debugging
 document.addEventListener('keydown', e => {
 	if(e.code = "ArrowDown")
 	{
 		console.log(window.scrollY);
 	}
 })
-
-
 
 
 // const leftBtn = document.querySelector("#leftBtn");

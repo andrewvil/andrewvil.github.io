@@ -106,10 +106,6 @@ header{
 	filter: blur(20px);
 }
 
-.blur:active{
-	filter: none;
-}
-
 /* flashlight effect */
 .shadow {
   position: absolute;
@@ -118,12 +114,17 @@ header{
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background-image: radial-gradient(circle at center, transparent, #000 15%);
+  background-image: radial-gradient(circle at center, transparent, #000 10vw);
+}
+
+.warntext{
+	color:red;
+	font-size:2rem;
 }
 
 .wrapper {
   height: 100vh;
-  background-image: url('img/fnaf3.jpg');
+  /* background-image: url('img/fnaf3.jpg'); */
   background-size: cover;
   position: relative;
   overflow: hidden;
