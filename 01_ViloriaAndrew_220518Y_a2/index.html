@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT HORROR GAMES</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+	
+	<meta name="mobile-web-app-capable" content = "yes">
+	<meta name="apple-mobile-web-app-capable" content = "yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content = "black">
+	<meta name = "apple-mobile-web-app-title" content = "ABOUT HORROR GAMES">
+	
+	<!-- get icons from https://favicon.io/ -->
+	<link rel="icon" type="image/x-icon" href="Icons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="Icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Icons/favicon-16x16.png">
+	<!--for android-->
+	<link rel="manifest" href="Icons/site.webmanifest">
+	
+</head>
+<body>
+
+	<!-- head page -->
+    <header>
+		<div>
+			<div><button class="button" id="fsb">toggle fullscreen</button></div>
+			<div>
+				<h1>WHY ARE HORROR GAMES SO SCARY?</h1>
+			</div>
+			<hr>
+			<div>
+				<br>
+				<img src = "img/fredi.jpg" class = "images" alt = "FNAF freddy">
+				<p class="imagecredit">
+					*Freddy from Five Night's at Freddy's
+				</p>
+				<h2>Horror games have been one of the most popular game genres.</h2>
+			</div>
+			<div class = "lefttext">
+				Celebrities like Pewdiepie, Markiplier, Jacksepiceye
+				have documented playing many horror games,
+				which contributed to it's popularity.
+				However, without its high-quality immersive experience,
+				it would not be where it is today.
+				<br><br>
+			</div>
+			
+			<hr>
+			
+			<div class = "lefttext">
+				<h2>Horror game developers keep these things in mind:</h2>
+			</div>
+		</div>
+    </header>
+	
+	<!-- nav button -->
+    <nav>
+        <button id="hamIcon" class="button">Menu</button>
+        <div id = "menuList">
+            <div><button id="page1btn" class="button">Story</button></div>
+            <div><button id="page2btn" class="button">Visual</button></div>
+            <div><button id="page3btn" class="button">Audio</button></div>
+        </div>
+    </nav>
+	
+	<!-- pages -->
+    <div id="pagecontainer">
+	
+		<!-- STORY page -->
+        <div class="page" id="page1">
+			<div>
+				<div>
+					<h1>STORY</h1>
+				</div>
+				<hr>
+				The most effective way to immerse the player <b>before even playing the game</b>.<br><br>
+				
+				<div>
+					<img class = "images" src="img/ma.jpg" alt = "the mortuary assistant">
+					<p class="imagecredit"><i>*The Mortuary Assistant</i></p>
+				</div>
+				
+				<div>
+					In the game <i>The Mortuary Assistant</i>, the story starts off with an apprentice mortician that has to 
+					<b>work alone</b> in a mortuary that has a <b>reputation for supernatural events</b>.
+					<br><br>
+					With that, the player already knows to expect having to deal with those events, 
+					and the idea of a <b>haunted mortuary</b> sounds <i>scary</i>. <br><br>
+				</div>
+				
+				<hr>
+				
+			</div>
+        </div>
+		
+		<!-- VISUAL page -->
+        <div class="page" id="page2">
+			<div>
+				<div>
+					<h1>VISUAL</h1>
+				</div>
+				<hr>
+				<i>The blank space below is a flashlight simulation. Move your cursor around it, and click a cube.</i>
+				
+				<p class="warntext"><br><i>It is recommended to be on PC and have window zoom at 100% during this experience.</i></p>
+				<hr>
+				<div class="wrapper">
+					<div id="ball"></div>
+					<div class="shadow"></div>
+					<!-- <div id="ball"></div> -->
+				</div>
+				<hr>
+			
+				<br>
+				<div class="textwall">
+					<p class="imagecredit">*<i><b>Five Nights at Freddy's 3</b></i> game.</p>
+
+					Many horror games love to use <u>darkness</u>.
+					<br>This takes advantage of our evolutionary fear of darkness.
+					<br><br>
+					Darkness also comes with an unknown factor, as it gives players absence of information.
+					<br>
+					<br>
+					That leaves the players unsettled and guessing for answers.
+					<br>
+					<br>
+					Would you have known there was a paper bin on the bottom left corner?
+					<br><br>
+				</div>
+				
+				<hr>
+				
+				<div class="textwall">
+					<br>
+					Horror games like to make use of uncanny visuals to add to the unsettling feeling<br><br>
+					<p class="warntext">click the image to unblur/blur it.</p>
+					<img class="blur" src="img/omori.jpg" alt="omori scary">
+					<br><br><br>
+					<p class="imagecredit">*<b><i>Omori</i></b> mirror easter egg</p>
+					<br><br>
+					It is best to choose uncanny over realism, as audience 
+					love to scrutinize attempted realism and that can distract them from the immersion.
+					Being clearly unrealistic throws the idea of attempted realism out the window.
+				</div>
+				
+				<hr>
+			</div>
+        </div>
+		
+		<!-- AUDIO page -->
+        <div class="page" id="page3">
+			<div>
+				<div>
+					<h1>AUDIO</h1>
+				</div>
+				<hr>
+				
+				<div class = "aud">
+					<div class = "pe">
+						<br>
+						Audio is one of the most important <br>aspects that make a horror game, enhancing the immersive experience.
+						<br><a style="color:yellow:" title="Five Nights at Freddy's abbreviated.">FNAF</a> is a perfect example.
+						<br><br><br>
+					</div>
+					<div class="audiosample">
+						<audio controls>
+							<source src="audio/fnaf.ogg" type="audio/ogg">
+							<source src="audio/fnaf.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+						<br><br>
+						<p class="imagecredit">*an audio sample of <br><i><b>Five Nights at Freddy's 2</b></i> ambience.</p>
+						<br><br>
+					</div>
+				</div>
+				
+				<hr>
+				
+				<div class = "aud">
+					
+					<div class="audiosample">
+						<audio controls>
+							<source src="audio/jumpscare.ogg" type="audio/ogg">
+							<source src="audio/jumpscare.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+						<br><br>
+						<p class="imagecredit">*an audio sample of <br><i><b>Five Nights at Freddy's: <br>Sister Location </b></i>Jumpscare</p>
+					</div>
+					
+					<div class="pe">
+						<br>
+						And when it's time for a <a style="color:red;" title="intended to scare the audience by surprising them with an abrupt change in image or event, usually co-occurring with a loud, jarring sound.">jumpscare</a>,
+						<br>a sudden and eerie sound plays to breathe life into the jumpscare
+						<br><br>
+					</div>
+				</div>
+				
+				<hr>
+				
+				<div class = "aud">
+					<div class = "pe">
+						<br>
+						Audio can also be used to help the player, for example these footsteps used to indicate a creature's movement.
+						<br><br><br>
+					</div>
+					<div class="audiosample">
+						<audio controls>
+							<source src="audio/footsteps.ogg" type="audio/ogg">
+							<source src="audio/footsteps.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+						<br><br>
+						<p class="imagecredit">*an audio sample of <br><i><b>Five Nights at Freddy's</b></i> footsteps.</p>
+						<br><br>
+					</div>
+				</div>
+				
+				<hr>
+				
+				<div class = "aud">
+					
+					<div class="audiosample">
+						<audio controls>
+							<source src="audio/fan.ogg" type="audio/ogg">
+							<source src="audio/fan.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+						<br><br>
+						<p class="imagecredit">*an audio sample of <br><i><b>Five Nights at Freddy's</b></i> office sound.</p>
+					</div>
+					
+					<div class="pe">
+						<br>
+						Or, some red herrings that mask the sound, leaving players no choice but to focus and be immersed.
+						<br><br>
+					</div>
+				</div>
+				
+				<hr>
+				
+				
+			</div>
+        </div>
+    </div>
+	
+	<footer>
+		<br>
+		
+		<br>
+		<div>
+			Sources:
+			<br><br>
+			<a href="https://redharegames.wordpress.com/2021/10/15/simple-article-how-do-we-design-horror-games/" target="_blank">How do we design Horror Games?</a>
+			<br>
+			<a href="https://www.youtube.com/watch?v=1yTIhtfgDwY&" target="_blank">How Audio Enhances the Horror of Five Nights At Freddy's</a>
+		</div>
+		<div class="feedbackform">
+			<form action="mailto:jandrew.viloria@gmail.com" method = "post" enctype="text/plain">
+				<p>Have any feedback?</p>
+				<input id="aVal" type="email" placeholder="Enter e-mail address ">
+				<br>
+				<input id="bVal" type="text" placeholder="Your comments">
+				<button id="submit">Send!</button>
+			</form>
+		</div>
+	</footer>
+</body>
+</html>

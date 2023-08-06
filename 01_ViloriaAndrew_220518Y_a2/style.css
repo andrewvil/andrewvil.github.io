@@ -1,0 +1,308 @@
+*{
+	font-family: "Courier", monospace;
+	
+	/* for debugging */
+	/* border: 1px solid white;  */
+}
+
+body{
+	background:black;
+	
+	color:white;
+}
+
+body{
+	height:1000px;
+}
+
+h2{
+	font-size:1.5rem;
+}
+
+/* navigation  */
+nav{
+	margin:auto;
+}
+
+#page3btn, #page2btn, #page1btn{
+    display:inline;
+	animation-name: dropdownmenu;
+	animation-duration: 0.5s;
+}
+
+#hamIcon{
+	display:none;
+}
+
+.button{
+	background-color:black;
+	color:white;
+	width:100%;
+	height:5vh;
+	border:1px solid white;
+	
+}
+.button:hover{
+	background-color:#111;
+}
+.button:active{
+	border:1px solid yellow;
+}
+
+#menuList{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+#menuList > div {
+	
+	flex:1;
+}
+
+/* pages */
+.page{
+	overflow:hidden;
+	padding:10px;
+	box-sizing:border-box;
+	
+	margin:auto;
+	text-align:center;
+	justify-content:center;
+	
+    width:100vw;
+    border:3px dotted white;
+	color:white;
+	font-size:1.5rem;
+	animation-name: openpage;
+	animation-duration: 1.5s;
+}
+
+#page1{
+	height:1000px;
+}
+
+
+#page2{
+	height:2200px;
+}
+
+#page3{
+}
+.page > *{
+	width:100%;
+}
+
+
+
+input {
+	background-color:black;
+}
+
+
+
+.images{
+	width:70%;
+	border:1px dashed white;
+}
+
+header{
+	text-align:center;
+	width:800px;
+	margin:auto;
+}
+
+.pe{
+	color:yellow;
+}
+
+.pred{
+	color:red;
+}
+
+
+
+/* flashlight effect */
+.shadow {
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
+  left: 50%;
+  top: 50%;
+  
+  /* transparent circle at center of image (mimics flashlight) */
+  background-image: radial-gradient(circle at center, transparent, #000 10vw);
+  /* this ignores pointer events on this class, so elements behind it can be interacted with. */
+  pointer-events:none;
+}
+
+.warntext{
+	color:red;
+	font-size:1rem;
+}
+
+.wrapper {
+  height: 600px;
+  background-image: url('img/fnaf3.jpg');
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+#ball {
+	background: white;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#ball:hover{
+	background: grey;
+}
+
+audio{
+	width:300px;
+	color:black;
+	background-color:white;
+
+}
+
+/* audio section */
+.aud {
+	display:flex;
+	flex-wrap:wrap;
+	text-align:left;
+}
+
+.aud > .pe {
+	width: 50%;
+}
+
+.aud > .audiosample {
+	width:50%;
+}
+
+/* feedback email form */
+.feedbackform {
+	width:50%;
+}
+
+#aVal, #bVal {
+	width:100%;
+	color:yellow;
+}
+
+#bVal {
+	height:100px;
+}
+
+.lefttext
+{
+	margin:auto;
+	width:800px;
+}
+
+/* image credits */
+.imagecredit
+{
+	font-size:0.7em;
+	color:aquamarine;
+}
+
+/* blurring image */
+.blur{
+	width:50%;
+	filter: blur(20px);
+}
+
+@keyframes dropdownmenu
+{
+	
+}
+
+footer > *{
+	width:800px;
+	margin:auto;
+}
+
+a{
+	text-decoration:none;
+	color:aquamarine;
+}
+
+@media screen and (min-width:801px)
+{
+	.page,nav {
+		width:800px;
+	}
+	@keyframes openpage {
+	   0% {width:0px;opacity:0;}
+	   50% {opacity:0.3;}
+	   100% {width:800px;opacity:1;} 
+	}
+	#page3 {
+		height:1100px;
+	}
+}
+
+@media screen and (max-width:800px){
+	footer{
+		width:100%;
+	}
+	.lefttext {
+		width:60%;
+	}
+	
+	header {
+		width:100%;
+	}
+	
+	.page {
+		width:100%;
+	}
+	
+	#page3 {
+		height:2000px;
+	}
+	@keyframes openpage {
+	   from {width:0px;opacity:0;} 
+	   to {width:100%;opacity:1;} 
+	}
+	
+    #hamIcon{display: block;} /* unhide menu icon */
+	#menuList{display:none;}
+	#menuList > div {
+		flex-basis:100%;
+	}
+	.button {
+		width:100%;
+	}
+	
+	.aud{
+		text-align:center;
+	}
+	
+	.aud > .pe {
+		flex-basis:100%;
+	}
+
+	.aud > .audiosample {
+		flex-basis:100%;
+	}
+	
+	audio{
+		width:80%;
+	}
+	
+	@keyframes dropdownmenu
+	{
+		from{background-color:white; border-color:black;color:black;}
+		to {background-color:black; border-color:white;color:white;}
+	}
+
+}
+#menuList.menuShow{
+	display:flex;
+}
